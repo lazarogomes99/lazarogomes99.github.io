@@ -1,4 +1,4 @@
-### Deploy: <a target="_blank" href="https://lazarogomes99.github.io/">lazarogomes99.dev</a>
+### Deploy: <a href="https://lazarogomes99.github.io/">lazarogomes99.dev</a>
 
 ## Um resumo sobre mim. 
 
