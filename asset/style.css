@@ -25,7 +25,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 18px 150px;
+    padding: 18px 40px;
     box-shadow: 0 0.1rem 0.5rem var(--background-plus);
     width: 100%;
     background: var(--color-letra-plus);
@@ -41,12 +41,6 @@ body {
     
 }
 
-#burguer {
-    display: none;
-    text-align: right;
-    
-}
-
 #menu span {
     color: var(--color-red-details);
     font-size: 2rem;
@@ -56,11 +50,10 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
-    
 }
 
 
-.nav-item1, .nav-item2 {
+.nav-item {
     text-decoration: none;
     color: var(--color-plus);
     font-size: 1.2rem;
@@ -70,13 +63,37 @@ body {
     transition: ease-out 0.5s;
 }
 
-.nav-item1:hover , .nav-item2:hover {
+.nav-item:hover {
     border: 1px solid var(--color-plus);
     color: var(--color-red-details);
     
 }
 
+.burguer {
+    cursor: pointer;
+    display: none;
+    color: var(--color-red-details);
+}
 
+.burguer .bar {
+    display: flex;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+
+}
+
+.burguer .bar:nth-child(1),
+.burguer .bar:nth-child(3){
+    background: var(--color-red-details);
+}
+
+.burguer .bar:nth-child(2){
+    background: var(--color-plus);
+}
 
 
 /*Estilização main page*/
@@ -105,7 +122,7 @@ h4::after {
     content: '|';
     margin-left: 5px;
     opacity: 1;
-    animation: piscando .7s infinite;
+    animation: piscando .7s;
 }
 
 .home-text .text-h1{
@@ -142,6 +159,7 @@ h4::after {
     margin-left: 40px;
 }
 
+
 @keyframes piscando {
     0%, 100% {
         opacity: 1;
@@ -156,10 +174,9 @@ h4::after {
 /* RESPONSIVIDADE */
 
 
-@media (max-width: 790px) {
+@media (max-width: 785px) {
     #menu{
-        padding: 18px 20px;
-        
+        padding: 18px 20px;   
     }
   
     #menu .myname {
@@ -170,21 +187,59 @@ h4::after {
         font-size: 1.3rem;
     }
 
-    #burguer {
+
+    .burguer {
         display: block;
-        cursor: pointer;
-        
     }
 
-    #menu ul {
-        display: none;
-        flex-direction: column;
+    .burguer.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
     }
 
-    .nav-item1, .nav-item2 {
+    .burguer.ativo .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .burguer.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    ul {
         border: none;
-        font-size: 1em;
+        background: var(--color-letra-plus);
+        color: var(--color-red-details);
     }
+
+    #itens{
+        position: fixed;
+        right: -100%;
+        top: 60px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--color-letra-plus);
+        gap: -20px;
+        transition: 0.5s;
+
+    }
+
+    #itens.ativo{
+        right:0;
+    }
+
+    .nav-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        border: 1px solid var(--color-red-details);
+    }
+
+
+
+
+
+
 
 
     .home {

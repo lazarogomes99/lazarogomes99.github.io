@@ -24,12 +24,12 @@ function downloadArquivo() {
 }
 
 
-const burguer = document.querySelector('span#burguer')
 
-function clickMenu() {
-    if(itens.style.display == 'block') {
-        itens.style.display = 'none'
-    }else {
-        itens.style.display = 'block'
-    }
-}
+
+const burguer = document.querySelector('.burguer');
+const itens = document.querySelector('#itens');
+
+menu.addEventListener('click', () => {
+    burguer.classList.toggle('ativo');
+    itens.classList.toggle('ativo');
+})
