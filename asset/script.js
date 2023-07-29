@@ -12,6 +12,8 @@ function digitando(elemento) {
 digitando(titulo);
 
 
+
+
 function downloadArquivo() {
     const link = document.querySelector('a.home-btn')
     const pdfFile = '../document/Resumo-LázaroG.pdf'
@@ -21,3 +23,13 @@ function downloadArquivo() {
     link.download = fileName
 }
 
+
+const burguer = document.querySelector('span#burguer')
+
+function clickMenu() {
+    if(itens.style.display == 'block') {
+        itens.style.display = 'none'
+    }else {
+        itens.style.display = 'block'
+    }
+}

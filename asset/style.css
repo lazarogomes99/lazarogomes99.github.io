@@ -30,13 +30,21 @@ body {
     width: 100%;
     background: var(--color-letra-plus);
     transition: all 0.5s;
-    position: fixed;    
+    position: fixed;
+    
 }
 
 #menu .myname {
     color: var(--color-plus);
     font-size: 1.7rem;
     font-weight: 600;
+    
+}
+
+#burguer {
+    display: none;
+    text-align: right;
+    
 }
 
 #menu span {
@@ -47,12 +55,31 @@ body {
 #menu ul {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+    
 }
 
-.nav-menu .nav-item img {
-    width: 4rem;
+
+.nav-item1, .nav-item2 {
+    text-decoration: none;
+    color: var(--color-plus);
+    font-size: 1.2rem;
+    border: 1px solid var(--color-red-details);
+    border-radius: 10px;
+    padding: 8px;
+    transition: ease-out 0.5s;
 }
+
+.nav-item1:hover , .nav-item2:hover {
+    border: 1px solid var(--color-plus);
+    color: var(--color-red-details);
+    
+}
+
+
+
+
+/*Estilização main page*/
 
 .home {
     width: 100%;
@@ -94,7 +121,7 @@ h4::after {
 }
 
 .home-btn {
-    padding: 15px 35px;
+    padding: 18px 35px;
     background: var(--color-red-details);
     color: var(--color-plus);
     border-radius: 20px;
@@ -102,11 +129,12 @@ h4::after {
     font-weight: 600;
     font-size: 1.2rem;
     transition: all 1s ease;
+    
 }
 
 .home-btn:hover {
     background: #2f2e41;
-    color: var(--color-red-details)
+    color: var(--color-red-details);
 }
 
 .home-img img {
@@ -131,26 +159,31 @@ h4::after {
 @media (max-width: 790px) {
     #menu{
         padding: 18px 20px;
-    }
-
-    .nav-menu {
-        position: fixed;
-        right: -100%;
-        top: 70px;
-        width: 100%;
-        height: 100%;
-        flex-direction: row;
         
-        transition: 0.3s;
-        text-align: center;
     }
-
+  
     #menu .myname {
         font-size: 1rem;
     }
 
-    #menu span {
+    #menu span{
         font-size: 1.3rem;
+    }
+
+    #burguer {
+        display: block;
+        cursor: pointer;
+        
+    }
+
+    #menu ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-item1, .nav-item2 {
+        border: none;
+        font-size: 1em;
     }
 
 
@@ -158,7 +191,6 @@ h4::after {
         padding: 100px 2%;
         flex-direction: column;
         text-align: center;
-        
         gap: 5rem;
     }
 
