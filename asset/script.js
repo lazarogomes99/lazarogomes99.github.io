@@ -1,5 +1,4 @@
 const titulo = document.querySelector('h4')
-const tituloH1 = document.querySelector('h1')
 
 function digitando(elemento) {
     const textoArray = elemento.innerHTML.split('')
