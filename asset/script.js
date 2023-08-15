@@ -25,10 +25,12 @@ function downloadArquivo() {
 
 
 
-const burguer = document.querySelector('.burguer');
-const itens = document.querySelector('#itens');
+const burguer = document.querySelector('.burguer')
+const itens = document.querySelector('#itens')
 
 menu.addEventListener('click', () => {
-    burguer.classList.toggle('ativo');
-    itens.classList.toggle('ativo');
+    const burguer = document.querySelector('.burguer')
+    const itens = document.querySelector('#itens')
+    burguer.classList.toggle('ativo')
+    itens.classList.toggle('ativo')
 })
