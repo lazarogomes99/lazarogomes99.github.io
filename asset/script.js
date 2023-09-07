@@ -1,4 +1,8 @@
 const titulo = document.querySelector('h4')
+const desenvolvedor = document.querySelector('h1')
+
+
+
 
 function digitando(elemento) {
     const textoArray = elemento.innerHTML.split('')
@@ -13,6 +17,7 @@ digitando(titulo);
 
 
 
+
 function downloadArquivo() {
     const link = document.querySelector('a.home-btn')
     const pdfFile = '../document/Resumo-LázaroG.pdf'
@@ -21,8 +26,6 @@ function downloadArquivo() {
     link.href = pdfFile
     link.download = fileName
 }
-
-
 
 
 const burguer = document.querySelector('.burguer')
