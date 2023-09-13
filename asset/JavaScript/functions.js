@@ -1,8 +1,3 @@
-const titulo = document.querySelector('h4')
-const desenvolvedor = document.querySelector('h1')
-
-
-
 
 function digitando(elemento) {
     const textoArray = elemento.innerHTML.split('')
@@ -12,10 +7,6 @@ function digitando(elemento) {
             elemento.innerHTML += letra, 100 * i)
     })
 }
-digitando(titulo);
-
-
-
 
 
 function downloadArquivo() {
@@ -28,12 +19,9 @@ function downloadArquivo() {
 }
 
 
-const burguer = document.querySelector('.burguer')
-const itens = document.querySelector('#itens')
 
-menu.addEventListener('click', () => {
-    const burguer = document.querySelector('.burguer')
-    const itens = document.querySelector('#itens')
-    burguer.classList.toggle('ativo')
-    itens.classList.toggle('ativo')
-})
+
+export default {
+    digitando: digitando,
+    downloadArquivo: downloadArquivo
+}
